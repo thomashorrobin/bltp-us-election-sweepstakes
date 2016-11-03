@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Predictions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th style="width:100px;">Trump</th>
+      <th style="width:100px;">Clinton</th>
+      <th>Last changed date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @predictions.each do |prediction| %>
+      <tr>
+        <td><%= prediction.first_name + " " + prediction.last_name %></td>
+        <td><%= prediction.trump_ec_votes %></td>
+        <td><%= prediction.clinton_ec_votes %></td>
+        <td><%= prediction.lockin_datetime.in_time_zone("Auckland").strftime("%e %b %I:%M %p") %></td>
+        <td><%= link_to 'Edit', edit_prediction_path(prediction) %></td>
+        <td><%= link_to 'Delete', prediction, method: :delete, data: { confirm: 'Are you sure? This deletes it from the database so no going back haha' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Prediction', new_prediction_path %>

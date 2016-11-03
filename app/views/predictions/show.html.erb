@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @prediction.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @prediction.last_name %>
+</p>
+
+<p>
+  <strong>Trump ec votes:</strong>
+  <%= @prediction.trump_ec_votes %>
+</p>
+
+<p>
+  <strong>Clinton ec votes:</strong>
+  <%= @prediction.clinton_ec_votes %>
+</p>
+
+<p>
+  <strong>Lockin datetime:</strong>
+  <%= @prediction.lockin_datetime %>
+</p>
+
+<%= link_to 'Edit', edit_prediction_path(@prediction) %> |
+<%= link_to 'Back', predictions_path %>
