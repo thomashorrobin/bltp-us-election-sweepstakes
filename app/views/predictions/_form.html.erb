@@ -22,18 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :trump_ec_votes %>
+    <%= f.label "How many electorial colage votes will Trump get? (Clinton's get's calculated as 538 minus this number)" %>
     <%= f.number_field :trump_ec_votes %>
-  </div>
-
-  <div class="field">
-    <%= f.label :clinton_ec_votes %>
-    <%= f.number_field :clinton_ec_votes %>
-  </div>
-
-  <div class="field">
-    <%= f.label :lockin_datetime %>
-    <%= f.datetime_select :lockin_datetime %>
   </div>
 
   <div class="actions">
